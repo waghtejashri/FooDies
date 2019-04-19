@@ -1,0 +1,170 @@
+<html>
+<head>
+  <title>FooDies</title>
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/my.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .container-fluid {
+  border-radius: 50px;
+  background-color: #dddd;
+  color: green;
+  } 
+  </style>
+  <script type="text/javascript">
+     function myFunction(){
+      alert("You are Register Succefully :)");
+    }
+  </script>-->
+</head>
+
+<body style="background-image: url(assets/img/fruits.jpg); background-repeat: no-repeat; background-size: cover;">
+  <div class="container" style="padding-top: 50px; padding-left: 100px; padding-right: 100px;padding-bottom: 50px;">
+<div class="container-fluid" style="padding-top: 50px; padding-left: 50px; padding-right: 50px;padding-bottom: 50px;">
+  <strong>
+  <h2>Registration Form </h2>
+  <form name="myform" method="POST" action="register.php" onsubmit="return validate()">
+    <div class="form-group">
+      <label for="name">Name : </label>
+      <input type="text" class="form-control" id="name" name="name1" />
+      <span id="nameloc" style="color: red"></span>
+    </div>
+ <div class="form-group"> <!-- Date input -->
+        <label for="date" class="col-sm-2">Date Of Birth</label>
+        <div class="col-sm-6">
+        <input class="form-control" id="date" name="date" type="date"/>
+      </div>
+  </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" id="email" name="email1"/>
+      <span id="emailloc" style="color: red"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="pass" />
+      <span id="passwordloc" style="color: red"></span>
+    </div>
+    <div class="form-group">
+      <label for="conpass">Confirm Password</label>
+      <input type="password" class="form-control" id="conpass" name="con_pass" />
+      <span id="passloc" style="color: red"></span>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="textareat" class="form-control" name="address" />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" name="city" />
+      <span id="cityloc" style="color: red"></span>
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <input type="text" class="form-control" id="state" name="state" />
+      <span id="stateloc" style="color: red"></span>
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" class="form-control" id="country" name="con" />
+      <span id="countryloc" style="color: red"></span>
+    </div>
+      <button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button>
+      <button type="reset" class="btn btn-info">Reset</button>
+  </form>
+</strong>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  function validate(){
+      var user= document.getElementById('name').value; 
+      //var lname= document.getElementById('lname').value; 
+      var email= document.getElementById('email').value; 
+      var pass= document.getElementById('password').value; 
+      var cpass= document.getElementById('conpass').value;
+      var no= document.getElementById('num').value;
+      var ct= document.getElementById('city').value;
+      var state= document.getElementById('state').value;
+      var contry= document.getElementById('country').value;
+      
+      if (user== "") {
+        document.getElementById('nameloc').innerHTML = "** Please fill the username field";
+      return false;
+      }
+      if((user.length <= 2) || (user.length >= 30)){
+        document.getElementById('nameloc').innerHTML = "** Username length must between 2 and 10";
+        return false;
+      }
+      if(!isNaN(user))
+      {
+        document.getElementById('nameloc').innerHTML = "**Only Charater are allowed";
+        return false;
+      }
+
+     /* if (lname == "") {
+        document.getElementById('lnameloc').innerHTML = "** Please fill the last field";
+      return false;
+      }*/
+      if (email == "") {
+        document.getElementById('emailloc').innerHTML = "** Please fill the Email field";
+      return false;
+      }
+      if (email.indexOf('@') <= 0) {
+        document.getElementById('emailloc').innerHTML = "** @ invalid position";
+      return false;
+      }
+      if((email.charAt(email.length-4) != '.') && (email.charAt(email.length-3) != '.')){
+        document.getElementById('emailloc').innerHTML = "** invalid . position in Email Id";
+        return false;
+      }
+      if (pass == "") {
+        document.getElementById('passwordloc').innerHTML = "** Please fill the Password field";
+      return false;
+      }
+      if(pass.length < 8){
+        document.getElementById('passwordloc').innerHTML = "** Password must be more than 8 Charater";
+        return false;
+      }
+      if (cpass == "") {
+        document.getElementById('passloc').innerHTML = "** Please fill the Confirm Password field";
+      return false;
+      }
+      if(pass != cpass)
+      {
+        document.getElementById('passloc').innerHTML = "** Password and Confirm Password are Not Matching";
+        return false;
+      }
+      if (no == "") {
+        document.getElementById('numloc').innerHTML = "** Please fill the Number field";
+      return false;
+      }
+      if (isNaN(no)) {
+        document.getElementById('numloc').innerHTML = "** User Must write Digit only";
+        return false;
+      }
+      if (no.length != 10) {
+        document.getElementById('numloc').innerHTML = "** Mobile number must be 10 digit only";
+        return false;
+      }
+      if (ct == "") {
+        document.getElementById('cityloc').innerHTML = "** Please fill the City field";
+      return false;
+      }
+      if (state == "") {
+        document.getElementById('stateloc').innerHTML = "** Please fill the State field";
+      return false;
+      }
+      if (contry == "") {
+        document.getElementById('countryloc').innerHTML = "** Please fill the Country field";
+      return false;
+      }
+    }
+</script>
+</body>
+</html>

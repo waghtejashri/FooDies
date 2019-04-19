@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FooDies</title>
+	<!--<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+<style type="text/css">
+	
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 5px;
+}
+.column img {
+  cursor: pointer; 
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body style=" background-image: url('assets/img/3bg.jpg');color: #f1f1f1; no background-repeat: no-repeat; background-size: cover;">
+<div class="container-fluid" style="padding-top: 10px;padding-bottom: 10px;">
+	<div class="panel panel-info">
+<div class="panel-heading" style="text-align:center;"><h2 class="blinking">Food Recipes!!</h2></div>
+<div class="panel-body" style="text-align:center;">
+ <p class="blinking">FOOD is ingredient that binds us TOGETHER...</p>
+</div>
+</div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <ul class="navbar-nav">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="#">FooDies</a>
+    </div>
+    <li class="nav-item active">
+      <a class="nav-link" href="first.html">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Recipies</a>
+	<div class="dropdown-menu">
+	<a class="dropdown-item" href="baking_recipes.html">Baking Recipes</a>
+	<a class="dropdown-item" href="#">Breakfast</a>
+	<a class="dropdown-item" href="#">Desserts</a>
+	<a class="dropdown-item" href="#">Dinner</a>
+	<a class="dropdown-item" href="#">Drinks</a>
+	<a class="dropdown-item" href="#">Snacks</a>
+	<div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Videos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gallary.html">Gallary</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="r.html">Registration</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="login.html">Login</a>
+    </li>
+  </ul>
+<ul class="navbar-nav ml-auto">
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</ul>
+</nav>
+</div></div>
+</li>
+</ul>
+</nav>
+	<div class="row" style="padding-left: 20px;position: relative;">
+		<div class="column">
+	<img src="assets/img/1.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300" onclick="myFunction(this);">
+</div>
+<div class="column">
+	<img src="assets/img/2.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300" onclick="myFunction(this);">
+</div>
+<div class="column">
+	<img src="assets/img/3.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300" onclick="myFunction(this);">
+</div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/4.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/5.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/6.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/44.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/11.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/22.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300"></div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/33.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/12.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/23.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/45.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/cake.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/juice.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/56.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/78.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/87.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+</div><hr>
+<div class="row" style="padding-left: 20px;position: relative;">
+	<div class="column">
+	<img src="assets/img/77.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/88.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+<div class="column">
+	<img src="assets/img/maggie.jpg" class="rounded" alt="Cinque Terre" width="100%" height="300">
+</div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+</body>
+</html>

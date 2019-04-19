@@ -1,0 +1,17 @@
+#body{
+	background-size: cover;
+	background-image: url(Fruits.jpg);
+	background-repeat: no-repeat;	
+}
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
